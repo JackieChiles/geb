@@ -46,6 +46,11 @@ def godel_number_to_miu(godel_number):
 
     return lines
 
-#miu_to_godel_number(["MI", "MII", "MIII", "MUI"])
-#godel_number_to_miu(313113111301)
-#godel_number_to_miu(miu_to_godel_number(["MI", "MII", "MIII", "MUI"]))
+def is_miu_proof_pair(m, n):
+    return godel_number_to_miu(m)[-1] == godel_number_to_miu(n)[0]
+
+#miu_to_godel_number(["MI", "MII", "MIIII", "MUI"])
+#godel_number_to_miu(3131131111301)
+#godel_number_to_miu(miu_to_godel_number(["MI", "MII", "MIIII", "MUI"]))
+#godel_number_to_miu(301)
+#is_miu_proof_pair(3131131111301, 301)
